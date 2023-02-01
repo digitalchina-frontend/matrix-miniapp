@@ -1,0 +1,32 @@
+{
+  "name": "matrix-wechat-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@commitlint/cli": "^17.4.2",
+    "commitlint-config-emoji-log": "^0.8.0",
+    "git-cz": "^4.9.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "git-cz"
+    }
+  },
+  "commitlint": {
+    "extends": [
+      "emoji-log"
+    ]
+  },
+  "devDependencies": {
+    "husky": "^8.0.3"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "commit": "git cz",
+    "prepare": "husky install"
+  }
+}
