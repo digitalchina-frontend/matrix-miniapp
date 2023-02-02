@@ -1,0 +1,41 @@
+name: Bug Report
+description: 提交错误报告。
+title: '[Bug]: '
+labels: ['bug', 'triage']
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢您花时间填写此错误报告！
+  - type: input
+    id: contact
+    attributes:
+      label: 联系方式
+      description: 如果我们需要更多信息，我们如何与您取得联系？
+      placeholder: 例如： email@example.com
+    validations:
+      required: false
+  - type: textarea
+    id: what-happen
+    attributes:
+      label: 发生了什么?
+      description: 也请告诉我们，您期望发生什么？
+      placeholder: 告诉我们你看到了什么！
+    validations:
+      required: true
+  - type: dropdown
+    id: browsers
+    attributes:
+      label: 您在哪些浏览器上看到了问题？
+      multiple: true
+      options:
+        - Firefox
+        - Chrome
+        - Safari
+        - Microsoft Edge
+  - type: textarea
+    id: logs
+    attributes:
+      label: 相关日志输出
+      description: 请复制并粘贴任何相关的日志输出。 这将自动格式化为代码，因此不需要反引号。
+      render: shell
