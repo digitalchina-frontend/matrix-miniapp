@@ -1,2 +1,9 @@
 <!--pages/scenicSpotList/index.wxml-->
-<text>pages/scenicSpotList/index.wxml</text>
+<view class="container">
+<filter></filter>
+  <scroll-view class="scroll-view" scroll-y="true" bindscrolltolower="scrolltolower">
+    <scenic-spot-card class="scroll-view-item" wx:for="{{list}}" item="{{item}}">
+    </scenic-spot-card>
+    <view class="done" wx:if="{{done}}">已全部加载完成</view>
+  </scroll-view>
+</view>
