@@ -13,15 +13,12 @@ Component({
   data: {
     filters:[
       {
-        name:'全部类型',
         key:'type',
-
         options:[
           '全部类型','自然风光','名胜古迹','文博场馆','游船演出','亲子乐园','动植物园','体育赛事','其他'
         ]
       },
       {
-        name:'全部地区',
         key:'area',
         options:[
           '全部地区','江岸区','江汉区','硚口区','汉阳区','武昌区'
@@ -29,7 +26,6 @@ Component({
       },
       {
         key:'sort',
-        name:'智能排序',
         options:[
           '智能排序','距离优先','价格优先'
         ]
@@ -37,9 +33,9 @@ Component({
     ],
     activeKey:'',
     params:{
-      type:'',
-      area:'',
-      sort:''
+      type:'全部类型',
+      area:'全部地区',
+      sort:'智能排序'
     }
   },
 
