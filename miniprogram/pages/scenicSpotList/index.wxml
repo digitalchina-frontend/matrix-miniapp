@@ -1,0 +1,12 @@
+<!--pages/scenicSpotList/index.wxml-->
+<view class="container">
+<view>
+  <input type="text" placeholder="请搜索景区名称" bindinput="search" class="inp"/>
+</view>
+<filter></filter>
+  <scroll-view class="scroll-view" scroll-y="true" bindscrolltolower="scrolltolower">
+    <scenic-spot-card class="scroll-view-item" wx:for="{{list}}" item="{{item}}">
+    </scenic-spot-card>
+    <view class="done" wx:if="{{done}}">已全部加载完成</view>
+  </scroll-view>
+</view>

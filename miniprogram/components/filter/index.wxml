@@ -1,0 +1,13 @@
+<!--components/filter/index.wxml-->
+<view class="filter-container">
+  <view wx:for="{{filters}}" >
+    <text class="name" bindtap="clickTit" data-key='{{item.key}}' >{{item.name}}</text>
+    <text class="arrow">▲</text>
+    <view wx:if="{{activeKey===item.key}}">
+      <view wx:for="{{item.options}}" wx:for-item="option" wx:key="{{option}}">
+        {{option}}
+      </view>
+    </view>
+  </view>
+
+</view>
