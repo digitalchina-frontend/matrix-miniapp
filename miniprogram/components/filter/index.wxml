@@ -1,13 +1,19 @@
 <!--components/filter/index.wxml-->
-<view class="filter-container">
-<view wx:for="{{filters}}" wx:key="{{item.key}}">
-  <text class="name">{{item.name}}</text>
-  <text class="arrow">▲</text>
-  <view wx:if="{{activeKey===item.key}}">
-      <view wx:for="{{item.options}}" wx:for-item="option"  wx:key="{{option}}">
-        {{option}}
-      </view>
+<view>
+  <view class="mask" wx:if="{{activeKey}}" bindtap="closeSelect">
   </view>
-</view>
+  <view class="filter-container">
+    <view wx:for="{{filters}}" wx:key="key" >
+      <view class="filter-item" bindtap="openSelect" data-key="{{item.key}}" >
+        <text class="name {{activeKey===item.key? 'active' : ''}}" >{{params[item.key]|| item.name}}</text>
+        <view class="arrow {{activeKey===item.key? 'active' : ''}}">▲</view>
+      </view>
+      <view class="select-container" wx:if="{{activeKey===item.key}}">
+        <view class="select-item {{params[item.key]===option? 'active' : ''}} " wx:for="{{item.options}}" wx:for-item="option" wx:key="option" bindtap="selectItem" data-key="{{item.key}}" data-item="{{option}}">
+          {{option}}
+        </view>
+      </view>
+    </view>
+  </view>
 
 </view>

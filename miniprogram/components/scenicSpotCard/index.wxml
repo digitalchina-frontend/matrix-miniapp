@@ -5,7 +5,7 @@
         <view class="name">{{item.name}}</view>
         <view class="desc">{{item.desc}}</view>
         <view wx:if="{{item.tags}}">
-          <block wx:for="{{item.tags}}" wx:for-item="tag" wx:for-index="tagIndex">
+          <block wx:for="{{item.tags}}" wx:key="tag" wx:for-item="tag" wx:for-index="tagIndex">
             <text class="tag">{{tag}}</text>
             <text class="separator" wx:if="{{tagIndex<item.tags.length-1}}">|</text>
           </block>

@@ -5,10 +5,11 @@ Page({
    * 页面的初始数据
    */
   data: {
-    list:[],
-    done:false
+    list: [],
+    done: false,
+    top:0
   },
-  page:1,
+  page: 1,
   /**
    * 生命周期函数--监听页面加载
    */
@@ -65,47 +66,62 @@ Page({
   onShareAppMessage() {
 
   },
-  getList(){
-    return new Promise((resolve,reject)=>{
+  getList() {
+    return new Promise((resolve, reject) => {
       wx.showLoading({
         title: '加载中',
       })
       setTimeout(() => {
-        const list=this.createFakeData((this.page-1)*20+1)
+        const list = this.createFakeData((this.page - 1) * 20 + 1)
         resolve(list)
         this.setData({
-          list:this.data.list.concat(list)
+          list: this.page === 1 ? list : this.data.list.concat(list)
         })
+        if (this.page === 1) {
+          this.setData({top:0})
+          // wx.createSelectorQuery()
+          //   .select('#scrollview')
+          //   .node()
+          //   .exec((res) => {
+          //     const scrollView = res[0].node;
+          //     console.log(scrollView);
+          //     scrollView.scrollTo({
+          //       top: 0
+          //     });
+          //   })
+        }
         this.page++
-        if(this.page===4){
-          this.setData({done:true})
+        if (this.page === 4) {
+          this.setData({
+            done: true
+          })
         }
         wx.hideLoading()
       }, 500);
     })
   },
-  createFakeData(startIndex){
-    const fakeData=[]
+  createFakeData(startIndex) {
+    const fakeData = []
     for (let index = 0; index < 20; index++) {
       fakeData.push({
-        name:'景区'+(startIndex+index),
-        img:'https://picsum.photos/200?'+index,
-        desc:'这是一个景区',
-        tags:['公园','打卡圣地'],
-        price:Math.floor(Math.random()*100),
-        distance:(Math.random()*100).toFixed(2)
+        name: '景区' + (startIndex + index),
+        img: 'https://picsum.photos/200?' + new Date().getTime() + '' + index,
+        desc: '这是一个景区'+ (startIndex + index),
+        tags: ['公园', '打卡圣地'],
+        price: Math.floor(Math.random() * 100),
+        distance: (Math.random() * 100).toFixed(2)
       })
     }
-    return fakeData
+    return fakeData.sort((a, b) =>{ return Math.random() > 0.5 ? -1 : 1; })
   },
-  scrolltolower(){
-    if(!this.data.done){
+  scrolltolower() {
+    if (!this.data.done) {
       console.log(11);
       this.getList()
     }
   },
-  refresh(){
-    this.setData({page:1})
+  refresh() {
+    this.page = 1
     this.getList()
   }
 })
