@@ -2,7 +2,7 @@
 .filter-container {
   z-index: 4;
   position: relative;
-  background-color: #f6f6f6;
+  background-color: #ffffff;
   width: 100vw;
   height: 50rpx;
   padding: 0 60rpx;
@@ -42,7 +42,7 @@
   top: 50rpx;
   z-index: 2;
   padding: 10rpx 60rpx 20rpx 60rpx;
-  background-color: #f6f6f6;
+  background-color: #ffffff;
 }
 
 .select-item {
@@ -57,6 +57,6 @@
   left: 0;
   width: 100%;
   bottom: 0;
-  background-color: rgba(202, 202, 202, 0.8);
+  background-color: rgba(130, 130, 130, 0.6);
   transition: opacity 300ms ease;
 }
