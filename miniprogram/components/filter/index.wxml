@@ -3,9 +3,9 @@
   <view class="mask" wx:if="{{activeKey}}" bindtap="closeSelect">
   </view>
   <view class="filter-container">
-    <view wx:for="{{filters}}" wx:key="key" >
-      <view class="filter-item" bindtap="openSelect" data-key="{{item.key}}" >
-        <text class="name {{activeKey===item.key? 'active' : ''}}" >{{params[item.key]|| item.name}}</text>
+    <view wx:for="{{filters}}" wx:key="key">
+      <view class="filter-item" bindtap="openSelect" data-key="{{item.key}}">
+        <text class="name {{activeKey===item.key? 'active' : ''}}">{{params[item.key]|| item.name}}</text>
         <view class="arrow {{activeKey===item.key? 'active' : ''}}">▲</view>
       </view>
       <view class="select-container" wx:if="{{activeKey===item.key}}">

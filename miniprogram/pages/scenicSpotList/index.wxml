@@ -1,7 +1,7 @@
 <!--pages/scenicSpotList/index.wxml-->
 <view class="container">
-<filter bind:getList="refresh"></filter>
-  <scroll-view scroll-top="{{top}}" class="scroll-view" scroll-y="true"  	scroll-with-animation="true" bindscrolltolower="scrolltolower">
+  <filter bind:getList="refresh"></filter>
+  <scroll-view scroll-top="{{top}}" class="scroll-view" scroll-y="true" scroll-with-animation="true" bindscrolltolower="scrolltolower">
     <scenic-spot-card class="scroll-view-item" wx:for="{{list}}" wx:key="name" item="{{item}}">
     </scenic-spot-card>
     <view class="done" wx:if="{{done}}">已全部加载完成</view>

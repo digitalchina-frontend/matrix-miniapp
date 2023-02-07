@@ -1,12 +1,12 @@
 /* pages/scenicSpotList/index.wxss */
 
-.scroll-view{
+.scroll-view {
   height: calc(100vh - 50rpx);
   padding: 20rpx 0;
   box-sizing: border-box;
 }
 
-.done{
+.done {
   text-align: center;
-  color:#9DA0A6
+  color: #9DA0A6
 }

@@ -119,7 +119,9 @@ Page({
   },
   refresh() {
     this.page = 1
-    this.setData({done:false})
+    this.setData({
+      done: false
+    })
     this.getList()
   }
 })
