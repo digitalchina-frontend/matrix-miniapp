@@ -7,7 +7,8 @@ Page({
   data: {
     list: [],
     done: false,
-    top: 0
+    top: 0,
+    triggered: false,
   },
   page: 1,
   /**
@@ -74,7 +75,8 @@ Page({
       //获取假数据
       const list = this.createFakeData((this.page - 1) * 20 + 1)
       this.setData({
-        list: this.page === 1 ? list : this.data.list.concat(list)
+        list: this.page === 1 ? list : this.data.list.concat(list),
+        triggered: false
       })
       /*
       如果是第一页，滚动到顶部
@@ -93,6 +95,13 @@ Page({
           done: true
         })
       }
+      if (this._freshing) {
+        this._freshing = false
+      }
+      if (this._freshing) {
+        this._freshing = false
+      }
+      console.log(this.data.triggered);
       wx.hideLoading()
     }, 500);
   },
@@ -123,5 +132,10 @@ Page({
       done: false
     })
     this.getList()
+  },
+  onRefresh(e) {
+    if (this._freshing) return
+    this._freshing = true
+    this.refresh()
   }
 })
