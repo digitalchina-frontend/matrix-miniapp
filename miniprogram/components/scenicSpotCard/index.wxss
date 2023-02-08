@@ -1,0 +1,50 @@
+/* components/scenicSportCard/index.wxss */
+.item {
+  display: flex;
+  margin: 0 20rpx 60rpx 20rpx;
+}
+
+.img {
+  width: 300rpx;
+  height: 300rpx;
+  margin-right: 40rpx;
+  border-radius: 16rpx;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+}
+
+.name {
+  font-size: 50rpx;
+  font-weight: 600;
+}
+
+.desc {
+  background-color: #FEF1E1;
+  color: #AA8A67;
+  font-size: 34rpx;
+  padding: 8rpx 16rpx;
+  border-radius: 10rpx;
+}
+
+.tag {
+  color: #616366;
+}
+
+.separator {
+  margin: 0 8rpx;
+  color: #cacaca;
+}
+
+.distance {
+  color: #9DA0A6
+}
+
+.price {
+  color: #F46322;
+  font-size: 44rpx;
+}
