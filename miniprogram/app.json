@@ -1,7 +1,8 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/scenicSpotList/index"
+    "pages/scenicSpotList/index",
+    "pages/captcha/index"
   ],
   "window": {
     "backgroundTextStyle": "light",

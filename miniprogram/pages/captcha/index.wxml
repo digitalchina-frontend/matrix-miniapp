@@ -1,0 +1,33 @@
+<!--pages/captcha/index.wxml-->
+<view class="content">
+
+  <view class="container">
+    <view class="cu-form-group margin-top">
+      <view class="title">姓名</view>
+      <input placeholder="请输入您的真实姓名"></input>
+    </view>
+
+    <view class="cu-form-group">
+      <view class="title">手机号码</view>
+      <input placeholder="请输入手机号码"></input>
+      <view class="cu-capsule radius">
+        <view class="cu-tag bg-blue">
+          +86
+        </view>
+        <view class="cu-tag line-blue">
+          中国大陆
+        </view>
+      </view>
+    </view>
+    <view class="cu-form-group">
+      <view class="title">验证码</view>
+      <input placeholder="请输入验证码" bindinput="CompleNum"></input>
+    
+      <canvas canvas-id="canvas" bindtap='change' style="width:200rpx;height: 70rpx;"></canvas>
+    </view>
+  </view>
+  <view class="weui-btn">
+    <button class="btn" bindtap='submit'  hover-class="btn-hover">点 击 注 册</button>
+
+  </view>
+</view>
