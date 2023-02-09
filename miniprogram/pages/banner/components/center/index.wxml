@@ -1,0 +1,10 @@
+<view  class="container">
+  <view class="tit">
+    畅玩新年
+  </view>
+  <view class="ban">
+    <Swiper imgUrls="{{imgUrls}}" class="ban-1" />
+    <Image class="ban-2" />
+  </view>
+  <ActiveImage imgUrls="{{imgUrls}}" style="width: 100%;" />
+</view>

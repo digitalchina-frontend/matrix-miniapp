@@ -1,0 +1,11 @@
+
+<scroll-view scroll-y="true" style="height: {{height}}px;">
+
+  <view class="top">
+  </view>
+  <view class="center">
+    <Banner />
+  </view>
+  <view class="footer">
+  </view>
+</scroll-view>

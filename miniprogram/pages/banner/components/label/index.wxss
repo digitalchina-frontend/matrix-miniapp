@@ -1,0 +1,19 @@
+/* pages/banner/components/label/index.wxss */
+.title{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: auto;
+  height: 50rpx;
+  text-align: center;
+  line-height: 50rpx;
+  background-color: red;
+  color: #ffffff;
+  font-size: 13px;
+  max-width: 120rpx;
+  min-width: 50rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  border-bottom-right-radius: 10rpx;
+}
