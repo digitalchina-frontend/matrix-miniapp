@@ -1,0 +1,25 @@
+/* pages/banner/components/activeImage/index.wxss */
+.con{
+  width: 100%;
+}
+.content{
+  display: flex;
+  margin-top: 30rpx;
+}
+.active-img{
+  width: 40%;
+  height: 200rpx;
+  margin: 0 20rpx;
+  position: relative;
+}
+.img{
+  display: block;
+  height: 200rpx;
+  width: 300rpx;
+  border-radius:10rpx ;
+  
+}
+.price{
+  width: 100%;
+  color: red;
+}

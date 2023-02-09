@@ -1,0 +1,16 @@
+<view class="con">
+  <scroll-view scroll-x="true" style="height: 310rpx">
+    <view class="content">
+      <view wx:for="{{imgUrls}}" wx:key="{{item.tit}}" class="active-img">
+        <image src="{{item.url}}" class="img" />
+        <view>
+          {{item.tit}}
+        </view>
+        <view class="price">
+          ￥{{item.price}}
+        </view>
+        <Label title="活动{{index}}" />
+      </view>
+    </view>
+  </scroll-view>
+</view>

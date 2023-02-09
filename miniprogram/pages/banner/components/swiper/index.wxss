@@ -1,0 +1,17 @@
+.swiper{
+  position: relative;
+}
+.swiper-block {
+  width: 100%;
+  height: 300rpx;
+  position: relative;
+}
+
+.swiper-item {
+  border-radius: 10rpx;
+
+}
+
+.slide-image {
+  width: 100%;
+}

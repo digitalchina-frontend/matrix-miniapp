@@ -1,0 +1,10 @@
+<view class="swiper">
+  <swiper autoplay="false" interval="5000" indicator-dots="{{true}}" indicator-color='#8a8a8a' indicator-active-color='#333' circular="false" class="swiper-block" bindchange="swiperChange" current="0">
+    <block wx:for="{{imgUrls}}" wx:key="{{item}}">
+      <swiper-item class="swiper-item ">
+        <image mode="aspectFill" src="{{item.url}}" class="slide-image" bindload='setContainerHeight' />
+      </swiper-item>
+    </block>
+  </swiper>
+  <Label title='萌宠乐园'/>
+</view>

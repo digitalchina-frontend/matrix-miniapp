@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "Swiper":"../swiper",
+    "Image":"../image",
+    "ActiveImage":"../activeImage"
+  }
+}
