@@ -1,15 +1,5 @@
 // components/filter/index.js
 Component({
-  /**
-   * 组件的属性列表
-   */
-  properties: {
-
-  },
-
-  /**
-   * 组件的初始数据
-   */
   data: {
     filters: [{
         key: 'type',
@@ -37,10 +27,6 @@ Component({
       sort: '智能排序'
     }
   },
-
-  /**
-   * 组件的方法列表
-   */
   methods: {
     openSelect(e) {
       if (e.currentTarget.dataset.key === this.data.activeKey) {

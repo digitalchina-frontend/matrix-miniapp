@@ -1,6 +1,6 @@
 {
   "usingComponents": {
-    "scenic-spot-card": "/components/scenicSpotCard/index",
-    "filter": "/components/filter/index"
+    "scenic-spot-card": "./components/scenicSpotCard/index",
+    "filter": "./components/filter/index"
   }
 }
