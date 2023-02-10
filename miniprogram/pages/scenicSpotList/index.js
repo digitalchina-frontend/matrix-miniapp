@@ -98,10 +98,6 @@ Page({
       if (this._freshing) {
         this._freshing = false
       }
-      if (this._freshing) {
-        this._freshing = false
-      }
-      console.log(this.data.triggered);
       wx.hideLoading()
     }, 500);
   },
