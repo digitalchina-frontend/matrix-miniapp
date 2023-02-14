@@ -1,0 +1,16 @@
+.fixed_btn {
+  position: fixed;
+  right: 30rpx;
+  bottom: 158rpx;
+  background: #eaf1fe;
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.diannao_icon {
+  width: 40rpx;
+  height: 40rpx;
+}
