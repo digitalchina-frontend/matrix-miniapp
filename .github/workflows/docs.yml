@@ -1,0 +1,47 @@
+name: Build and Deploy VuePress Site
+
+# 控制工作流触发的时机
+on:
+  # 在版本状态为 published 时运行工作流
+  release:
+    types: [published]
+
+  # 允许从 Actions tab 手动触发工作流
+  workflow_dispatch:
+
+# 一个工作流由一个或多个可并行或串行执行的 jobs 组成
+jobs:
+  # 这个工作流只包含一个名为 "build-and-deploy" 的 job
+  build-and-deploy:
+    # job 的运行环境类型
+    runs-on: ubuntu-latest
+
+    # Steps 表示 job 中将要执行的一系列任务
+    steps:
+      # 在 $GITHUB_WORKSPACE 下检出仓库代码
+      - name: Checkout 🛎️
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      # 搭建 Node 环境
+      - name: Setup Node.js 🔧
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+          cache: 'npm'
+
+      # 安装依赖包并构建
+      - name: Install and Build 🔧
+        run: |
+          npm ci
+          npm run build:docs
+
+      # 部署至 master 分支
+      - name: Deploy 🚀
+        uses: crazy-max/ghaction-github-pages@v3.1.0
+        with:
+          target_branch: master
+          build_dir: docs/.vuepress/dist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

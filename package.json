@@ -1,0 +1,63 @@
+{
+  "name": "@ma",
+  "version": "1.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "prepare": "husky install",
+    "build": "npm run build -ws",
+    "build:react": "npm run build -w @ma/finance-admin-react",
+    "build:vue3": "npm run build -w @ma/finance-admin-vue3",
+    "build:utils": "npm run build -w @ma/utils",
+    "build:docs": "npm run build -w @ma/docs",
+    "dev": "concurrently \"npm:dev:react\" \"npm:dev:vue3\" \"npm:dev:utils\"",
+    "dev:utils": "npm run dev -w @ma/utils",
+    "dev:react": "npm run dev -w @ma/finance-admin-react",
+    "dev:vue3": "npm run dev -w @ma/finance-admin-vue3",
+    "dev:docs": "npm run dev -w @ma/docs",
+    "commit": "git cz",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "release": "npm run release:check && npm run release:version",
+    "release:check": "npm run lint && npm run build",
+    "release:changelog": "auto-changelog && git add CHANGELOG.md",
+    "release:version": "bumpp package.json packages/*/package.json --execute=\"npm run release:changelog\" --commit \"🚀 RELEASE: %s\" --all"
+  },
+  "keywords": [],
+  "author": "fancn21th <fancn21th@aliyun.com> (http://fancn21th.cn/)",
+  "license": "MIT",
+  "workspaces": [
+    "docs",
+    "packages/*",
+    "domains/*/*"
+  ],
+  "config": {
+    "commitizen": {
+      "path": "git-cz"
+    }
+  },
+  "lint-staged": {
+    "*.{js,md,css,scss,yaml,yml,wxs,wxml,wxss,json,ts,vue,jsx,tsx,less}": [
+      "prettier --write"
+    ],
+    "*.{js,ts,vue,jsx,tsx}": [
+      "eslint --fix"
+    ]
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.4.2",
+    "@typescript-eslint/eslint-plugin": "^5.51.0",
+    "@typescript-eslint/parser": "^5.51.0",
+    "auto-changelog": "^2.4.0",
+    "bumpp": "^8.2.1",
+    "commitlint-config-emoji-log": "^0.8.0",
+    "concurrently": "^7.6.0",
+    "eslint": "^8.34.0",
+    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-vue": "^9.9.0",
+    "git-cz": "^4.9.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.1.1",
+    "prettier": "2.8.4"
+  }
+}

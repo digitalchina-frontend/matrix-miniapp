@@ -1,0 +1,10 @@
+**/node_modules/**
+**/build/**
+**/dist/**
+changelog.config.js
+commitlint.config.ts
+.prettierrc.js
+.eslintrc.js
+.eslintrc.miniapp.js
+.eslintrc.react.js
+.eslintrc.vue.js
