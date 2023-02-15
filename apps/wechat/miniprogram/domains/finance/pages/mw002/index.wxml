@@ -1,0 +1,5 @@
+<!--domains/tour/pages/mw002/index.wxml-->
+<view>
+  <view>子包：finance</view>
+  <view>故事编号：mw002</view>
+</view>
