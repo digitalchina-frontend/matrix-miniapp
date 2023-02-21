@@ -60,3 +60,7 @@
   background-color: rgba(130, 130, 130, 0.6);
   transition: opacity 300ms ease;
 }
+.name {
+  height: 50rpx;
+  width: max-content;
+}

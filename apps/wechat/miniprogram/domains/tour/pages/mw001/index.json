@@ -2,6 +2,6 @@
   "usingComponents": {
     "scenic-spot-card": "./components/scenicSpotCard/index",
     "filter": "./components/filter/index",
-    "fixedBtn": "/components/fixedBtn/fixedBtn"
+    "fixedBtn": "../../../../components/fixedBtn/index"
   }
 }
