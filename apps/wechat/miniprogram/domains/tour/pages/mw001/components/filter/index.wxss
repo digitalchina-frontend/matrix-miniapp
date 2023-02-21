@@ -1,0 +1,62 @@
+/* components/filter/index.wxss */
+.filter-container {
+  z-index: 4;
+  position: relative;
+  background-color: #ffffff;
+  width: 100vw;
+  height: 50rpx;
+  padding: 0 60rpx;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+}
+
+.filter-item {
+  display: flex;
+  align-items: center;
+}
+
+.active {
+  color: #7ab47c;
+}
+
+.name.active {
+  font-weight: 700;
+}
+
+.arrow {
+  margin-left: 10rpx;
+  font-size: 24rpx;
+  transition: transform 0.2s;
+}
+
+.arrow.active {
+  transform: rotate(180deg);
+}
+
+.select-container {
+  position: fixed;
+  width: 100%;
+  box-sizing: border-box;
+  left: 0;
+  top: 50rpx;
+  z-index: 2;
+  padding: 10rpx 60rpx 20rpx 60rpx;
+  background-color: #ffffff;
+}
+
+.select-item {
+  padding: 20rpx 0;
+  border-bottom: thin solid rgb(207, 207, 207);
+}
+
+.mask {
+  z-index: 3;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  bottom: 0;
+  background-color: rgba(130, 130, 130, 0.6);
+  transition: opacity 300ms ease;
+}

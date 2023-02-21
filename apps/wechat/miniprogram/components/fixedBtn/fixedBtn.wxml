@@ -1,0 +1,3 @@
+<view class="fixed_btn" bind:tap="toSourceCode">
+  <image class="diannao_icon" src="../../static/diannao.png" />
+</view>

@@ -1,0 +1,18 @@
+{
+  "pages": ["pages/index/index", "pages/sourceCode/index"],
+  "subpackages": [
+    {
+      "root": "domains/tour",
+      "pages": ["pages/mw001/index"]
+    }
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Weixin",
+    "navigationBarTextStyle": "black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents"
+}

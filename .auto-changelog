@@ -1,0 +1,13 @@
+{
+  "output": "CHANGELOG.md",
+  "template": ".clTemplate.hbs",
+  "commitLimit": false,
+  "package": true,
+  "replaceText": {
+    "FIX: ": "",
+    "NEW: ": "",
+    "IMPROVE: ": "",
+    "DOC: ": "",
+    "BREAKING: ": ""
+  }
+}
