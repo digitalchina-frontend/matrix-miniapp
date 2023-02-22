@@ -1,0 +1,88 @@
+/* components/scenicSportCard/index.wxss */
+
+@keyframes loading {
+  100% {
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+  }
+}
+
+.item {
+  display: flex;
+  margin: 0 20rpx 60rpx 20rpx;
+}
+
+.img-container {
+  width: 300rpx;
+  height: 300rpx;
+  position: relative;
+  overflow: hidden;
+  margin-right: 40rpx;
+  border-radius: 16rpx;
+}
+
+.img-loading {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border-radius: 16rpx;
+  top: 0;
+  left: 0;
+  background-color: #dfdfdf;
+}
+
+.img-loading::after {
+  border-radius: 16rpx;
+  display: block;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform: translateX(-100%);
+  background: linear-gradient(90deg, transparent, rgba(207, 207, 207, 0.7), transparent);
+  animation: loading 1.5s infinite;
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+  border-radius: 16rpx;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+}
+
+.name {
+  font-size: 50rpx;
+  font-weight: 600;
+}
+
+.desc {
+  background-color: #fef1e1;
+  color: #aa8a67;
+  font-size: 34rpx;
+  padding: 8rpx 16rpx;
+  border-radius: 10rpx;
+}
+
+.tag {
+  color: #616366;
+}
+
+.separator {
+  margin: 0 8rpx;
+  color: #cacaca;
+}
+
+.distance {
+  color: #9da0a6;
+}
+
+.price {
+  color: #f46322;
+  font-size: 44rpx;
+}

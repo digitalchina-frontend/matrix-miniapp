@@ -1,0 +1,8 @@
+<view class="qrcode-container">
+  <view class="qrcode-link">
+    <view class="title">请在电脑浏览器输入下方登陆地址</view>
+    <view class="link">
+      <text class="link_url" bind:tap="clip">{{ link }}</text>
+    </view>
+  </view>
+</view>

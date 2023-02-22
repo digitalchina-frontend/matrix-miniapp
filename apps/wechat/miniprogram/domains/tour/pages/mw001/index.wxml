@@ -1,0 +1,21 @@
+<!-- pages/scenicSpotList/index.wxml -->
+<view>
+  <filter bind:getList="refresh"></filter>
+  <scroll-view
+    scroll-top="{{top}}"
+    class="scroll-view"
+    scroll-y="true"
+    refresher-enabled="true"
+    scroll-with-animation="true"
+    refresher-triggered="{{triggered}}"
+    bindrefresherrefresh="onRefresh"
+    bindscrolltolower="scrolltolower"
+  >
+    <scenic-spot-card class="scroll-view-item" wx:for="{{list}}" wx:key="name" item="{{item}}" />
+    <view class="done" wx:if="{{done}}">已全部加载完成</view>
+  </scroll-view>
+  <!-- 网站预览地址 -->
+  <fixedBtn
+    link="https://digitalchina-frontend.github.io/develop/matrix/miniapp/wechat/tour/MW001.html"
+  />
+</view>

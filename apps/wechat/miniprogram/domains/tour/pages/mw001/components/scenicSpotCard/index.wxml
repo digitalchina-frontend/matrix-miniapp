@@ -1,0 +1,22 @@
+<!--components/scenicSportCard/index.wxml-->
+<view class="item">
+  <view class="img-container">
+    <view wx:if="{{imgLoading}}" class="img-loading" />
+    <image class="img" src="{{item.img}}" bindload="imgLoad"></image>
+  </view>
+  <view class="content">
+    <view class="name">{{item.name}}</view>
+    <view class="desc">{{item.desc}}</view>
+    <view wx:if="{{item.tags}}">
+      <block wx:for="{{item.tags}}" wx:key="tag" wx:for-item="tag" wx:for-index="tagIndex">
+        <text class="tag">{{tag}}</text>
+        <text class="separator" wx:if="{{tagIndex<item.tags.length-1}}">|</text>
+      </block>
+    </view>
+    <view class="distance">距我{{item.distance}}km</view>
+    <view>
+      <text class="price">¥{{item.price}}</text>
+      <text style="color: #9da0a6">起</text>
+    </view>
+  </view>
+</view>

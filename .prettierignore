@@ -1,0 +1,6 @@
+coverage
+dist
+build
+.cache
+project.config.json
+sitemap.json

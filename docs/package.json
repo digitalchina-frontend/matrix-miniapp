@@ -1,0 +1,16 @@
+{
+  "name": "@ma/docs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vuepress dev",
+    "build": "vuepress build"
+  },
+  "keywords": [],
+  "author": "fancn21th <fancn21th@aliyun.com> (http://fancn21th.cn/)",
+  "license": "MIT",
+  "devDependencies": {
+    "vuepress": "2.0.0-beta.60"
+  }
+}
