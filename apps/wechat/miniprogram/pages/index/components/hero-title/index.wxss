@@ -1,0 +1,21 @@
+/* pages/index/components/hero-title/index.wxss */
+.hero-title__text {
+  font-size: 56rpx;
+  font-family: PingFang SC-Semibold, PingFang SC;
+  font-weight: 600;
+  color: #000000;
+  line-height: 4.705vh;
+}
+
+.hero-title__text--primary {
+  color: #466aff;
+}
+
+.hero-title__welcome {
+  height: 4.33vh;
+  margin-top: 1.73vh;
+  font-size: 28rpx;
+  font-family: PingFang SC-Regular, PingFang SC;
+  color: #a2a8bd;
+  line-height: 4.33vh;
+}

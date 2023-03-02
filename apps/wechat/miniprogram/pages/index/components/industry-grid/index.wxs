@@ -1,0 +1,15 @@
+function filteredIndustries(data) {
+  return data.industries.filter(function (item) {
+    return ~item.name.toLowerCase().indexOf(data.keyword.toLowerCase());
+  });
+}
+
+function isEmpty(data) {
+  var arr = filteredIndustries(data);
+  return arr.length <= 0;
+}
+
+module.exports = {
+  filteredIndustries: filteredIndustries,
+  isEmpty: isEmpty,
+};

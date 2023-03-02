@@ -1,0 +1,6 @@
+<!--pages/index/components/industry-item/index.wxml-->
+<wxs src="./index.wxs" module="computed" />
+<view class="{{ computed.itemClass({ industry, cardStyles }) }}">
+  <image src="{{ computed.imageSrc({ industry, cardStyles }) }}" class="industry-item__icon" />
+  <text class="industry-item__text">{{industry.name}}</text>
+</view>

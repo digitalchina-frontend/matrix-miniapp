@@ -1,0 +1,23 @@
+/* pages/index/components/home/index.wxss */
+.home {
+  position: relative;
+  min-height: 100vh;
+  padding: 0 32rpx;
+  background: url(https://636c-cloud1-7guwwrcid3040e0c-1316692614.tcb.qcloud.la/home/bg.png?sign=e777fe32cd8989a8a3dab4d951c6122b&t=1677736455)
+    0% 0%/100% 44.84vh no-repeat;
+}
+
+.home::before {
+  content: '';
+  position: absolute;
+  top: 12vh;
+  right: 0;
+  width: 34.13%;
+  height: 16.54vh;
+  background: url(https://636c-cloud1-7guwwrcid3040e0c-1316692614.tcb.qcloud.la/home/illustration.png?sign=befabb8f389a72ec796c85e54461158d&t=1677736512)
+    center/100% 100% no-repeat;
+}
+
+.home__content {
+  padding-top: 6.44vh;
+}

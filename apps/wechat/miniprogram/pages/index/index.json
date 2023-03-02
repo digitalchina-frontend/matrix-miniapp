@@ -1,4 +1,6 @@
 {
-  "usingComponents": {},
-  "navigationBarTitleText": "首页"
+  "usingComponents": {
+    "home": "./components/home/index"
+  },
+  "navigationStyle": "custom"
 }

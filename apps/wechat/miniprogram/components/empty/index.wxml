@@ -1,0 +1,4 @@
+<!--components/empty/index.wxml-->
+<view class="empty">
+  <text class="empty__text">{{ description }}</text>
+</view>

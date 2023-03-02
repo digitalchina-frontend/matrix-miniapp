@@ -1,0 +1,18 @@
+var bem = require('../../../../wxs/bem.wxs');
+
+function itemClass(data) {
+  if (data.industry && data.cardStyles[data.industry.name])
+    return bem('industry-item', data.cardStyles[data.industry.name].modifier);
+  return '';
+}
+
+function imageSrc(data) {
+  if (data.industry && data.cardStyles[data.industry.name])
+    return data.cardStyles[data.industry.name].iconUrl;
+  return '';
+}
+
+module.exports = {
+  itemClass: itemClass,
+  imageSrc: imageSrc,
+};

@@ -1,0 +1,12 @@
+<!--pages/index/components/industry-grid/index.wxml-->
+<wxs src="./index.wxs" module="computed" />
+<view>
+  <view class="industry-grid" wx:if="{{ !computed.isEmpty({ industries, keyword }) }}">
+    <industry-item
+      wx:for="{{ computed.filteredIndustries({ industries, keyword }) }}"
+      wx:key="name"
+      industry="{{item}}"
+    />
+  </view>
+  <empty description="没有找到您搜索的内容，敬请期待" wx:else />
+</view>

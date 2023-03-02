@@ -16,4 +16,8 @@ export const navbarZh = [
     text: 'uni-app',
     children: [],
   },
+  {
+    text: '其他',
+    children: ['/best-practice'],
+  },
 ];

@@ -1,0 +1,19 @@
+/* eslint-disable */
+var REGEXP = getRegExp('{|}|"', 'g');
+
+/**
+ * wxs的全局对象中没有 Object，模拟一个 keys 方法
+ * @param {Object} obj
+ * @returns {Array}
+ * 参考自 vant-weapp：https://github.com/youzan/vant-weapp/blob/dev/lib/wxs/object.wxs
+ */
+function keys(obj) {
+  return JSON.stringify(obj)
+    .replace(REGEXP, '')
+    .split(',')
+    .map(function (item) {
+      return item.split(':')[0];
+    });
+}
+
+module.exports.keys = keys;

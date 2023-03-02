@@ -1,0 +1,13 @@
+<!--pages/index/components/hero-title/index.wxml-->
+<wxs src="../../../../wxs/bem.wxs" module="bem"></wxs>
+<view class="hero-title">
+  <view class="{{bem('hero-title__text','primary')}}">
+    <text>小程序</text>
+  </view>
+  <view class="hero-title__text">
+    <text>一站式解决方案</text>
+  </view>
+  <view class="hero-title__welcome">
+    <text>hi同学，神州数码欢迎您的到来～</text>
+  </view>
+</view>
