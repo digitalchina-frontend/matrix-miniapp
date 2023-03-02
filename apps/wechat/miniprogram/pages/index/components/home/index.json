@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "hero-title": "../hero-title/index",
+    "search-bar": "../search-bar/index",
+    "industry-grid": "../industry-grid/index"
+  }
+}

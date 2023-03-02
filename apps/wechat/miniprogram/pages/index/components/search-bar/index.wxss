@@ -1,0 +1,36 @@
+/* pages/index/components/search-bar/index.wxss */
+.search-bar {
+  width: 100%;
+  height: 9.41vh;
+  margin-top: 2.29vh;
+  padding: 0 42rpx;
+  background: rgba(255, 255, 255, 0.61);
+  border-radius: 38rpx 38rpx 38rpx 38rpx;
+  border: 2rpx solid #ffffff;
+}
+
+.search-bar__field {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  column-gap: 6rpx;
+}
+
+.search-bar__field > input {
+  flex: 1;
+  height: 46rpx;
+}
+
+.search-bar__field::before {
+  content: '';
+  width: 46rpx;
+  height: 46rpx;
+  background: url(https://636c-cloud1-7guwwrcid3040e0c-1316692614.tcb.qcloud.la/icons/search.png?sign=63962d94168c704b57b17fc436cd26df&t=1677736565)
+    100%/100% no-repeat;
+}
+
+.search-bar__placeholder {
+  font-size: 28rpx;
+  font-family: PingFang SC-Regular, PingFang SC;
+  color: #939393;
+}

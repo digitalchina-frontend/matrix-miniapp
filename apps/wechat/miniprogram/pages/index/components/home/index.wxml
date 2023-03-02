@@ -1,0 +1,8 @@
+<!--pages/index/components/home/index.wxml-->
+<view class="home" style="padding-top: {{statusBarHeight}}rpx;">
+  <view class="home__content">
+    <hero-title />
+    <search-bar value="{{searchBarText}}" bind:search="search" />
+    <industry-grid industries="{{industries}}" keyword="{{searchBarText}}" />
+  </view>
+</view>

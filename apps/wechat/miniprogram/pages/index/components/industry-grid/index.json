@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "industry-item": "../industry-item/index",
+    "empty": "../../../../components/empty/index"
+  }
+}

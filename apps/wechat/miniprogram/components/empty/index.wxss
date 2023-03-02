@@ -1,0 +1,24 @@
+/* components/empty/index.wxss */
+.empty {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 32px 0;
+}
+
+.empty::before {
+  content: '';
+  width: 160px;
+  height: 160px;
+  background: url(https://636c-cloud1-7guwwrcid3040e0c-1316692614.tcb.qcloud.la/illustration/empty.png?sign=85404c2f0c248a4c35fe5ead61994569&t=1677748852)
+    center/100% 100% no-repeat;
+}
+
+.empty__text {
+  margin-top: 1rem;
+  color: #969799;
+  font-size: 1rem;
+  line-height: 1.5;
+}

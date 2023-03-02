@@ -1,0 +1,8 @@
+/* pages/index/components/industry-grid/index.wxss */
+.industry-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 37rpx;
+  row-gap: 24rpx;
+  margin-top: 2.78vh;
+}

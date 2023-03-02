@@ -1,0 +1,13 @@
+<!--pages/index/components/search-bar/index.wxml-->
+<view class="search-bar" bind:tap="tap">
+  <view class="search-bar__field">
+    <input
+      value="{{value}}"
+      focus="{{focus}}"
+      bind:confirm="confirm"
+      placeholder="搜索小程序行业分类"
+      placeholder-class="search-bar__placeholder"
+      confirm-type="search"
+    />
+  </view>
+</view>

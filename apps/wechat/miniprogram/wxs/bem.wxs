@@ -1,0 +1,47 @@
+var object = require('./object.wxs');
+
+/**
+ * 用于生成符合 BEM 命名约定的 CSS class name，主要用于根据 Block 和 Element 的状态生成 Modifier
+ * 举例：
+ * 输入：bem('card__header', { center: true })
+ * 返回：'card__header card__header--center'
+ *
+ * @param {String} name 基础 CSS class name
+ * @param {String | Array | Object} conf 需要添加的 flag，如果是数组全部进行拼接，如果是对象，对象的 key 为 flag，value 为布尔值表示是否拼接
+ * @returns {String} 拼接好的 CSS class name
+ * 参考自 vant-weapp，参考链接：https://github.com/youzan/vant-weapp/blob/dev/lib/wxs/bem.wxs
+ */
+
+function bem(name, conf) {
+  var mods = [];
+  traversing(mods, conf);
+  return join(name, mods);
+}
+
+function join(name, mods) {
+  mods = mods.map(function (mod) {
+    return name + '--' + mod;
+  });
+  mods.unshift(name);
+  return mods.join(' ');
+}
+
+function traversing(mods, conf) {
+  if (!conf) {
+    return;
+  }
+
+  if (typeof conf === 'string' || typeof conf === 'number') {
+    mods.push(conf);
+  } else if (conf && conf.constructor === 'Array') {
+    conf.forEach(function (item) {
+      traversing(mods, item);
+    });
+  } else if (typeof conf === 'object') {
+    object.keys(conf).forEach(function (key) {
+      conf[key] && mods.push(key);
+    });
+  }
+}
+
+module.exports = bem;
