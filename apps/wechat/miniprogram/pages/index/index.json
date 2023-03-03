@@ -2,5 +2,6 @@
   "usingComponents": {
     "home": "./components/home/index"
   },
-  "navigationStyle": "custom"
+  "navigationStyle": "custom",
+  "navigationBarTextStyle": "white"
 }
