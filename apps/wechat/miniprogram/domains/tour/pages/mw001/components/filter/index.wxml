@@ -11,6 +11,7 @@
       </view>
       <view class="select-container" wx:if="{{activeKey===item.key}}">
         <view
+          wx:if="{{item.key!=='more'}}"
           class="select-item {{params[item.key]===option? 'active' : ''}} "
           wx:for="{{item.options}}"
           wx:for-item="option"
@@ -20,6 +21,41 @@
           data-item="{{option}}"
         >
           {{option}}
+        </view>
+
+        <view wx:if="{{item.key==='more'}}">
+          <form catchsubmit="formSubmit" catchreset="formReset">
+            <view wx:for="{{item.filters}}" wx:key="key" wx:for-item="option">
+              <view style="padding: 20rpx 32rpx">
+                <text>{{option.text}}</text>
+              </view>
+              <radio-group
+                class="my-radio"
+                name="{{option.key}}"
+                data-key="{{option.key}}"
+                bindchange="radioChange"
+              >
+                <radio
+                  wx:for="{{option.options}}"
+                  wx:for-item="option_item"
+                  wx:key="option_item"
+                  value="{{option_item}}"
+                  checked="{{option_item === params[option.key]}}"
+                  class="radio-index"
+                >
+                  <view
+                    class="radio-item {{moreSelect[option.key] === option_item ? 'active' : ''}}"
+                  >
+                    {{option_item}}
+                  </view>
+                </radio>
+              </radio-group>
+            </view>
+            <view class="btn-area">
+              <button class="reset-btn" formType="reset">重置</button>
+              <button class="submit-btn" formType="submit">确认</button>
+            </view>
+          </form>
         </view>
       </view>
     </view>

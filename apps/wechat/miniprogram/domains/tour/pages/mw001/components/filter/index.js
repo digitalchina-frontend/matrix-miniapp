@@ -3,20 +3,6 @@ Component({
   data: {
     filters: [
       {
-        key: 'type',
-        options: [
-          '全部类型',
-          '自然风光',
-          '名胜古迹',
-          '文博场馆',
-          '游船演出',
-          '亲子乐园',
-          '动植物园',
-          '体育赛事',
-          '其他',
-        ],
-      },
-      {
         key: 'area',
         options: ['全部地区', '江岸区', '江汉区', '硚口区', '汉阳区', '武昌区'],
       },
@@ -24,12 +10,31 @@ Component({
         key: 'sort',
         options: ['智能排序', '距离优先', '价格优先'],
       },
+      {
+        key: 'more',
+        filters: [
+          {
+            key: 'stars',
+            text: '景区星级',
+            options: ['5A', '4A', '其他'],
+          },
+          {
+            key: 'isFree',
+            text: '是否免费',
+            options: ['免费'],
+          },
+        ],
+      },
     ],
     activeKey: '',
     params: {
-      type: '全部类型',
+      more: '筛选',
       area: '全部地区',
       sort: '智能排序',
+    },
+    moreSelect: {
+      stars: '',
+      isFree: '',
     },
   },
   methods: {
@@ -51,6 +56,31 @@ Component({
       const params = {
         ...this.data.params,
         [e.currentTarget.dataset.key]: e.currentTarget.dataset.item,
+      };
+      this.setData({
+        params,
+        activeKey: '',
+      });
+      this.triggerEvent('getList', params);
+    },
+    radioChange(e) {
+      const moreSelect = {
+        ...this.data.moreSelect,
+        [e.currentTarget.dataset.key]: e.detail.value,
+      };
+      this.setData({
+        moreSelect,
+      });
+    },
+    formReset() {
+      this.setData({
+        moreSelect: {},
+      });
+    },
+    formSubmit(e) {
+      const params = {
+        ...this.data.params,
+        ...e.detail.value,
       };
       this.setData({
         params,

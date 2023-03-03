@@ -3,5 +3,6 @@
     "scenic-spot-card": "./components/scenicSpotCard/index",
     "filter": "./components/filter/index",
     "fixedBtn": "../../../../components/fixedBtn/index"
-  }
+  },
+  "navigationBarTitleText": "景区列表"
 }
