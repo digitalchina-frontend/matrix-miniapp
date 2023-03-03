@@ -54,4 +54,11 @@ Component({
       },
     },
   },
+  methods: {
+    tap() {
+      wx.navigateTo({
+        url: this.data.industry.link,
+      });
+    },
+  },
 });

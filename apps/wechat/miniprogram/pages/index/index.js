@@ -8,7 +8,7 @@ Page({
       },
       {
         name: '旅游行业',
-        link: '/domains/tour',
+        link: '/domains/tour/pages/mw001/index',
       },
       {
         name: '健康医疗行业',
