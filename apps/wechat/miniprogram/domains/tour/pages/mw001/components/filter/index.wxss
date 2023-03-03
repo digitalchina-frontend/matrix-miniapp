@@ -4,20 +4,21 @@
   position: relative;
   background-color: #ffffff;
   width: 100vw;
-  height: 50rpx;
-  padding: 0 60rpx;
+  height: 122rpx;
+  padding: 36rpx 32rpx;
   box-sizing: border-box;
   display: flex;
   justify-content: space-between;
 }
 
 .filter-item {
+  height: 100%;
   display: flex;
   align-items: center;
 }
 
 .active {
-  color: #7ab47c;
+  color: #ff7800;
 }
 
 .name.active {
@@ -39,15 +40,14 @@
   width: 100%;
   box-sizing: border-box;
   left: 0;
-  top: 50rpx;
+  top: 122rpx;
   z-index: 2;
-  padding: 10rpx 60rpx 20rpx 60rpx;
   background-color: #ffffff;
 }
 
 .select-item {
-  padding: 20rpx 0;
-  border-bottom: thin solid rgb(207, 207, 207);
+  padding: 30rpx 32rpx;
+  border-bottom: thin solid #ebebeb;
 }
 
 .mask {
@@ -61,6 +61,42 @@
   transition: opacity 300ms ease;
 }
 .name {
-  height: 50rpx;
   width: max-content;
+}
+
+.my-radio {
+  display: flex;
+  justify-content: space-between;
+  padding: 20rpx 40rpx;
+}
+.radio-index {
+  position: relative;
+}
+.radio-item {
+  width: 160rpx;
+  height: 60rpx;
+  position: absolute;
+  bottom: calc(50% - 30rpx);
+  right: calc(50% - 80rpx);
+  text-align: center;
+  line-height: 60rpx;
+}
+.radio-item.active {
+  color: #fff;
+}
+.btn-area {
+  display: flex;
+  padding: 32rpx;
+}
+.reset-btn {
+  flex-basis: 50%;
+  background: linear-gradient(90.4deg, #f6c443 5.41%, #f1a039 103.1%);
+  color: #fff;
+  border-radius: 50rpx 0rpx 0rpx 50rpx;
+}
+.submit-btn {
+  flex-basis: 50%;
+  background: linear-gradient(90.4deg, #ef8d35 5.41%, #ee792f 103.1%);
+  color: #fff;
+  border-radius: 0rpx 50rpx 50rpx 0rpx;
 }

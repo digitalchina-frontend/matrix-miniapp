@@ -1,12 +1,37 @@
 /* pages/scenicSpotList/index.wxss */
-
+.list-container {
+  background-color: #f0f0f0;
+}
 .scroll-view {
-  height: calc(100vh - 50rpx);
-  padding: 20rpx 0;
+  height: calc(100vh - 122rpx);
   box-sizing: border-box;
 }
 
 .done {
   text-align: center;
   color: #9da0a6;
+}
+
+.box {
+  column-count: 2;
+  column-gap: 30rpx;
+  padding: 32rpx;
+}
+.box-item {
+  break-inside: avoid;
+}
+
+/* 修改小程序内置单选框样式，在组件内部修改不生效？ */
+.wx-radio-input {
+  background-color: #f7f7f7 !important;
+  border-color: #f7f7f7 !important;
+  width: 160rpx !important;
+  height: 60rpx !important;
+  border-radius: 60rpx !important;
+}
+.wx-radio-input.wx-radio-input-checked {
+  background: linear-gradient(92.08deg, #ff825a 3.72%, #eb5c30 98.63%) !important;
+}
+wx-radio .wx-radio-input.wx-radio-input-checked:before {
+  content: '' !important;
 }
