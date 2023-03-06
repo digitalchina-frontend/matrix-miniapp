@@ -447,6 +447,11 @@ _示例 2：_
 
 至此，在不对接后端服务的情况下，一个完整页面的开发工作已经完成，下面介绍如何使用云函数提供 mock API。
 
+#### Source · Demo
+
+- Source：[GitHub](https://github.com/digitalchina-frontend/matrix-miniapp/tree/main/apps/wechat/miniprogram/pages/index)
+- Demo：<br><img src="/images/matrix/miniapp/matrix.jpg" alt="matrix" style="width: 200px; margin:1rem;">
+
 ## 如何开发云函数？
 
 待补充
