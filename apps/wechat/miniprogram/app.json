@@ -1,5 +1,5 @@
 {
-  "pages": ["pages/index/index", "pages/sourceCode/index"],
+  "pages": ["pages/index/index", "pages/sourceCode/index", "pages/custom-navigationbar/index"],
   "subpackages": [
     {
       "root": "domains/tour",

@@ -150,6 +150,10 @@ _示例 2：_
   });
   ```
 
+:::tip
+了解更多：[定制微信小程序导航栏样式](./custom-navigationbar.md)
+:::
+
 2. HeroTitle 组件
 
 - `.wxml`：

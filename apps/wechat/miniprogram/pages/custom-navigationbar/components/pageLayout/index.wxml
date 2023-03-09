@@ -1,0 +1,6 @@
+<!--pages/custom-navigationbar/components/pageLayout/index.wxml-->
+<wxs src="./index.wxs" module="computed" />
+<view class="page-layout" style="{{ computed.styles({ statusBarHeight }) }}">
+  <navigation-bar />
+  <slot></slot>
+</view>

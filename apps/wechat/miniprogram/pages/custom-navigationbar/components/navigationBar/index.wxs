@@ -1,0 +1,7 @@
+function isSubPage(data) {
+  return data.currentPages.length > 1;
+}
+
+module.exports = {
+  isSubPage: isSubPage,
+};

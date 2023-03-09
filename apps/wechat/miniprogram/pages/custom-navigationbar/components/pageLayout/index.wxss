@@ -1,0 +1,7 @@
+/* pages/custom-navigationbar/components/pageLayout/index.wxss */
+.page-layout {
+  --nav-height: 44px; /* 微信默认导航栏高度 */
+  padding-top: calc(
+    var(--status-bar-height) + var(--nav-height)
+  ); /* 导航栏已经脱离文档流，为其留白 */
+}
