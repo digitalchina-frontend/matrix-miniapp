@@ -1,0 +1,1 @@
+import{_ as t,p as a,q as o,R as e,t as c}from"./framework-5866ffd3.js";const n={},r=e("h1",{id:"物联网-iot",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#物联网-iot","aria-hidden":"true"},"#"),c(" 物联网（IoT）")],-1),s=[r];function _(d,i){return a(),o("div",null,s)}const l=t(n,[["render",_],["__file","index.html.vue"]]);export{l as default};

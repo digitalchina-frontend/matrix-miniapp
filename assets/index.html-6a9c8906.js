@@ -1,0 +1,1 @@
+import{_ as a,p as t,q as n,R as e,t as c}from"./framework-5866ffd3.js";const r={},s=e("h1",{id:"uni-app",tabindex:"-1"},[e("a",{class:"header-anchor",href:"#uni-app","aria-hidden":"true"},"#"),c(" uni-app")],-1),o=[s];function i(_,d){return t(),n("div",null,o)}const h=a(r,[["render",i],["__file","index.html.vue"]]);export{h as default};

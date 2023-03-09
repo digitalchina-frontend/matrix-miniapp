@@ -1,0 +1,1 @@
+const t=JSON.parse('{"key":"v-5599fbb2","path":"/wechat/tour/","title":"旅游业","lang":"zh-CN","frontmatter":{},"headers":[],"git":{"updatedTime":1677572665000,"contributors":[{"name":"TadXiao","email":"zlxiao97@yahoo.com","commits":1}]},"filePathRelative":"wechat/tour/README.md"}');export{t as data};

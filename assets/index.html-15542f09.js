@@ -1,0 +1,1 @@
+const a=JSON.parse('{"key":"v-99ef66a0","path":"/wechat/","title":"微信小程序","lang":"zh-CN","frontmatter":{},"headers":[],"git":{"updatedTime":1677572665000,"contributors":[{"name":"TadXiao","email":"zlxiao97@yahoo.com","commits":1}]},"filePathRelative":"wechat/README.md"}');export{a as data};
