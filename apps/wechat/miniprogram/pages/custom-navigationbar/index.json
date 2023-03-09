@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "page-layout": "./components/pageLayout/index"
+  },
+  "navigationBarTitleText": "景区列表",
+  "navigationStyle": "custom"
+}

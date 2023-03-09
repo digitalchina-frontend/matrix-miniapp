@@ -1,0 +1,6 @@
+<!-- pages/scenicSpotList/index.wxml -->
+<view>
+  <page-layout>
+    <view style="height: 200vh">页面内容</view>
+  </page-layout>
+</view>

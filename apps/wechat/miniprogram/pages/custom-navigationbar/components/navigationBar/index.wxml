@@ -1,0 +1,14 @@
+<!--domains/tour/pages/mw001/components/navigationBar/index.wxml-->
+<wxs src="./index.wxs" module="computed" />
+<view class="dc-navigation">
+  <view class="dc-navigation__content">
+    <view
+      wx:if="{{ computed.isSubPage({ currentPages }) }}"
+      bindtap="back"
+      class="dc-navigation__back icon-back"
+    >
+      back
+    </view>
+    自定义导航栏
+  </view>
+</view>

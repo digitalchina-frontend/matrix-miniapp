@@ -1,0 +1,22 @@
+/* domains/tour/pages/mw001/components/navigationBar/index.wxss */
+.dc-navigation {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding-top: var(--status-bar-height); /* 为状态栏留白 */
+  line-height: var(--nav-height);
+  background: url(https://636c-cloud1-7guwwrcid3040e0c-1316692614.tcb.qcloud.la/illustration/im-cloud.png?sign=0ba7d91dc6c361dd7cafc04fe52a2be1&t=1678340774)
+    20% 0%/150rpx 100% no-repeat;
+  background-color: white;
+  background-origin: content-box;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.dc-navigation__content {
+  text-align: center;
+}
+
+.dc-navigation__back {
+  position: absolute;
+  left: 1rem;
+}

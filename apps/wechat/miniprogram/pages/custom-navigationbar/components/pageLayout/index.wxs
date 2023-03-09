@@ -1,0 +1,7 @@
+function styles(data) {
+  return '--status-bar-height:' + data.statusBarHeight + 'px';
+}
+
+module.exports = {
+  styles: styles,
+};
