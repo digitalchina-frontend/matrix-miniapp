@@ -50,6 +50,7 @@ Component({
     closeSelect() {
       this.setData({
         activeKey: '',
+        moreSelect: this.data.params,
       });
     },
     selectItem(e) {
