@@ -1,6 +1,7 @@
 /* pages/scenicSpotList/index.wxss */
 .list-container {
   background-color: #f0f0f0;
+  font-family: PingFang SC;
 }
 .scroll-view {
   height: calc(100vh - 122rpx);

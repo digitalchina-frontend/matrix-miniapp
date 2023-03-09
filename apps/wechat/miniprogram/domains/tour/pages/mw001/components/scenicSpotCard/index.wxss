@@ -8,7 +8,7 @@
 }
 
 .item {
-  border-radius: 16rpx;
+  border-radius: 24rpx;
   background-color: #fff;
   margin-bottom: 32rpx;
   overflow: hidden;
@@ -56,24 +56,30 @@
 }
 
 .name {
-  font-size: 40rpx;
+  width: 100%;
+  font-size: 28rpx;
   font-weight: 600;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .desc {
   background-color: #fceee6;
   color: #ec5d29;
-  font-size: 25rpx;
-  padding: 8rpx 16rpx;
-  border-radius: 10rpx;
+  font-size: 16rpx;
+  font-weight: 500;
+  padding: 8rpx 10rpx;
+  border-radius: 24rpx;
 }
 
 .tag {
-  font-size: 25rpx;
-  color: #616366;
+  font-size: 20rpx;
+  color: #727272;
 }
 
 .separator {
+  font-size: 20rpx;
   margin: 0 8rpx;
   color: #cacaca;
 }
@@ -83,15 +89,29 @@
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  margin-bottom: 10rpx;
+  margin: 6rpx 0;
 }
 
 .distance {
-  font-size: 25rpx;
-  color: #9da0a6;
+  font-size: 20rpx;
+  color: #727272;
+  font-weight: 700;
 }
 
 .price {
   color: #f46322;
-  font-size: 44rpx;
+  font-size: 34rpx;
+  font-weight: 600;
+}
+
+.hot {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-weight: 600;
+  font-size: 22rpx;
+  padding: 12rpx 8rpx;
+  border-radius: 24rpx 0px;
+  color: #fff;
+  background: linear-gradient(269.03deg, #ff4400 -4.95%, #ffa000 112.84%);
 }

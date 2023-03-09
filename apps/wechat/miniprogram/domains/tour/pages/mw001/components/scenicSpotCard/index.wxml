@@ -8,6 +8,7 @@
       src="{{item.img}}"
       bindload="imgLoad"
     ></image>
+    <view wx:if="{{item.ifHot}}" class="hot">2023年热门</view>
   </view>
   <view class="content">
     <view class="name">{{item.name}}</view>
@@ -19,8 +20,7 @@
     </view>
     <view class="price-distance">
       <view>
-        <text class="price">¥{{item.price}}</text>
-        <text style="color: #9da0a6">起</text>
+        <text class="price">{{item.price ? '¥' + item.price : '免费'}}</text>
       </view>
       <view class="distance">距我{{item.distance}}km</view>
     </view>
